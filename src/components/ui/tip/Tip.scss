@@ -1,0 +1,101 @@
+@import '../BaseStyles';
+
+.tip-container {
+  position: relative;
+  margin: 0 10px;
+}
+
+.tip {
+  width: 16px;
+  height: 16px;
+  border: 2px solid $color_light-gray;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 5;
+  cursor: pointer;
+
+  &:before {
+    top: 3px;
+    left: 7px;
+
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: $color_light-gray;
+    transition: 0.5s;
+  }
+
+  &:after {
+    top: 6px;
+    left: 7px;
+
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    background: $color_light-gray;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    border-color: $color_gray;
+
+    &:before,
+    &:after {
+      background: $color_gray;
+    }
+  }
+}
+
+.active {
+  border-color: $color_gray;
+}
+
+.active:before {
+  top: 4px;
+  height: 8px;
+  background: $color_gray;
+  transform: rotate(45deg);
+}
+
+.active:after {
+  top: 4px;
+  height: 8px;
+  background: $color_gray;
+  transform: rotate(-45deg);
+}
+
+.active ~ .hint {
+  opacity: 1;
+  z-index: 10;
+}
+
+.hint {
+  position: absolute;
+  cursor: default;
+  top: 30px;
+  left: 7px;
+  width: 195px;
+  height: auto;
+  background-color: $color_primary;
+  padding: 15px 12px;
+  opacity: 0;
+  transition: 1s;
+  z-index: 0;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: white;
+
+  &:before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: '';
+    border: 10px solid transparent;
+    border-left: 10px solid $color_primary;
+  }
+}

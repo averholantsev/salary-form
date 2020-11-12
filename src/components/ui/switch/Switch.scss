@@ -1,0 +1,70 @@
+@import '../BaseStyles';
+
+.switch-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 33px;
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+
+    height: 18px;
+    width: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    border: 1px solid $color_light-gray;
+    background: $color_light-gray;
+    transition: all 0.2s ease;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+      transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+    }
+
+    &:hover {
+      filter: brightness(95%);
+    }
+
+    &:checked {
+      border-color: $color_accent;
+      background: $color_accent;
+
+      &:after {
+        transform: translatex(12px);
+      }
+    }
+  }
+
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10.5px;
+    line-height: 12px;
+    letter-spacing: 0.045em;
+    color: $color_gray;
+  }
+}
+
+.checked {
+  color: $color_dark-gray !important;
+}

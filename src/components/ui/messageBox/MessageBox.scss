@@ -1,0 +1,23 @@
+@import '../BaseStyles';
+
+.message-container {
+  background: $color_light-orange;
+  width: 385px;
+  padding: 25px;
+  margin: 10px 0;
+  border-radius: 3px;
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+    margin-bottom: 8px;
+    color: $color_dark-gray;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

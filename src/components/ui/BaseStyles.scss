@@ -1,0 +1,17 @@
+$color_light-gray: #d5d5d5;
+$color_gray: #a9a9a9;
+$color_dark-gray: #434343;
+$color_accent: #efa642;
+$color_light-orange: #fbf3dc;
+$color_primary: #5e6cab;
+
+.header-h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.045em;
+  margin: 10px 0;
+  padding: 0;
+  color: $color_gray;
+}

@@ -1,0 +1,46 @@
+@import '../BaseStyles';
+
+.input-container {
+  margin: 10px 0;
+  margin-left: 33px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color_dark-gray;
+
+  input[type='text'] {
+    max-width: 150px;
+    padding: 6px 10px;
+    border: 1px solid $color_light-gray;
+    box-sizing: border-box;
+    border-radius: 12.5px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color_dark-gray;
+
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color_gray;
+    }
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
